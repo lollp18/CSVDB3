@@ -248,6 +248,7 @@ class Controller extends Model {
   async DeletTable(req, res) {
     try {
       const { id, tableID } = req.params
+
       if (!id) return res.sendStatus(400)
 
       if (!tableID) return res.sendStatus(400)

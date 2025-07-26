@@ -33,9 +33,10 @@ class Controller extends Model {
   InitUse() {
    this.App.use((req, res, next) => {
     res.set({
-        "Access-Control-Allow-Origin": 'true',
-        "Access-Control-Allow-Methods": " get, post, put, delete, options",
+        'Access-Control-Allow-Origin': "'http://localhost:3000/' ' http://localhost:8080/''https://csvdb-3.vercel.app/''https://csv3.netlify.app/'",
+        "Access-Control-Allow-Methods": " get, post, put, delete",
         "Access-Control-Allow-Headers": "'Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'",
+        'Access-Control-Allow-Credentials': 'true',
     });
 
     next();

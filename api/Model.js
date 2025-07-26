@@ -38,7 +38,7 @@ class Model {
         "http://localhost:8080/",
         "https://csvdb-3.vercel.app/",
       "https://csv3.netlify.app/"],
-      credentials: true,
+      credentials: 'include',
       optionSuccessStatus: 200,
       exposedHeaders: ["set-cookie"],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 

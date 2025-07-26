@@ -41,7 +41,7 @@ class Model {
       credentials: true,
       optionSuccessStatus: 200,
       exposedHeaders: ["set-cookie"],
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] // Ensure PATCH is included here
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 
 
     }
   }

@@ -66,8 +66,7 @@ this.App.use((req, res, next) => {
     next(); // Gehe zur nächsten Middleware oder Route
 });
 
-    next();
-});
+
     this.App.use(cors(this.CorsOptions))
     this.App.use(express.json())
     this.App.use(compression())

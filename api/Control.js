@@ -33,8 +33,8 @@ class Controller extends Model {
   InitUse() {
    this.App.use((req, res, next) => {
     res.set({
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": 'true',
+        "Access-Control-Allow-Methods": " get, post, put, delete, options",
         "Access-Control-Allow-Headers": "'Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'",
     });
 

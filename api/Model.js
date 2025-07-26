@@ -33,7 +33,7 @@ class Model {
 
     this.UserModel = mongoose.model("User", this.UserSchema)
     this.CorsOptions = {
-      origin:["http://localhost:3000", "http://localhost:8080"],
+      origin: ["http://localhost:3000", "http://localhost:8080","https://csvdb-3.vercel.app/"],
       credentials: true,
       optionSuccessStatus: 200,
       exposedHeaders: ["set-cookie"],

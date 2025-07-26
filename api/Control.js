@@ -31,7 +31,15 @@ class Controller extends Model {
   }
 
   InitUse() {
-   
+   this.App.use((req, res, next) => {
+    res.set({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers": "'Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'",
+    });
+
+    next();
+});
     this.App.use(cors(this.CorsOptions))
     this.App.use(express.json())
     this.App.use(compression())

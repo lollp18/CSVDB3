@@ -38,13 +38,8 @@ class Model {
 
     this.UserModel = mongoose.model("User", this.UserSchema)
     this.CorsOptions = {
-      origin:function (Origin, callback) {
-    if (!origin || allowedOrigins.includes(Origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+      origin: allowedOrigins,
+  
       credentials: true,
       optionSuccessStatus: 200,
       allowedHeaders: ['Content-Type', 'Authorization'],

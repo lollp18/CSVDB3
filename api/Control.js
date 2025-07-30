@@ -36,8 +36,6 @@ class Controller extends Model {
 this.App.use((req, res, next) => {
 
     
-
-    
      res.set({
             'Access-Control-Allow-Origin': 'http://localhost:3000', 
             'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
@@ -46,8 +44,6 @@ this.App.use((req, res, next) => {
             'Access-Control-Max-Age': '86400' 
         });
 
-
- 
     
 
     next(); 

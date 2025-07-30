@@ -32,38 +32,23 @@ class Controller extends Model {
 
   InitUse() {
 this.App.use((req, res, next) => {
-    // 1. Den Origin der eingehenden Anfrage ermitteln
-    const origin = req.headers.origin;
 
-    // 2. Liste der erlaubten Origins definieren
-    const allowedOrigins = [
-        'http://localhost:3000',
-        'http://localhost:8080',
-        'https://csv3.netlify.app'
-    ];
+    
 
-    // 3. Prüfen, ob der Origin erlaubt ist
-    if (allowedOrigins.includes(origin)) {
+    
         res.set({
-            'Access-Control-Allow-Origin': origin, // Spiegelt den anfragenden Origin zurück
-            'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS', // Wichtig: OPTIONS für Preflight
-            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization', // Füge alle Header hinzu, die dein Frontend sendet
+            'Access-Control-Allow-Origin': this.Origin, 
+            'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization', 
             'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Max-Age': '86400' // Optional: Wie lange Preflight-Ergebnisse gecacht werden
+            'Access-Control-Max-Age': '86400' 
         });
-    } else {
-        // Wenn der Origin nicht erlaubt ist, werden keine CORS-Header gesetzt,
-        // oder du könntest eine Fehlermeldung senden, aber der Browser blockiert es sowieso.
-        // Für Preflight-Anfragen (OPTIONS) musst du hier explizit antworten,
-        // damit der Browser nicht blockiert.
-    }
 
-    // Für Preflight-Anfragen (OPTIONS-Methode) sofort antworten
-    if (req.method === 'OPTIONS') {
-        return res.sendStatus(200); // Oder 204 No Content
-    }
 
-    next(); // Gehe zur nächsten Middleware oder Route
+ 
+    
+
+    next(); 
 });
 
 

@@ -30,6 +30,10 @@ class Model {
     }
 this.Origin=[
   "http://localhost:3000/",
+  "http://localhost:3000/users",
+  "http://localhost:3000/users/:id",
+  "http://localhost:3000/user/:id/tables",
+  "http://localhost:3000/user/:id/tables/:tableID", 
   "https://csvdb-3.vercel.app/",
   "https://csv3.netlify.app/"]
     this.UserSchema = new mongoose.Schema(this.Schema)

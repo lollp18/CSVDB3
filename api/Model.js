@@ -8,6 +8,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'https://csvdb-3.vercel.app',
   'https://csv3.netlify.app'
+  
 ];
 class Model {
   constructor() {

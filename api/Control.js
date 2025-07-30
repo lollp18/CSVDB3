@@ -46,7 +46,7 @@ this.App.use((req, res, next) => {
 
 
  
-    
+    this.App.options('*', cors()); 
 
     next(); 
 });

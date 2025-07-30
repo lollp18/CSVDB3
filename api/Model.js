@@ -4,7 +4,11 @@ import express from "express"
 import pkg from "lodash"
 import http from "http"
 const { get, merge } = pkg
-
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://csvdb-3.vercel.app',
+  'https://csv3.netlify.app'
+];
 class Model {
   constructor() {
     this.App = express()
@@ -40,7 +44,13 @@ this.Origin=[
 
     this.UserModel = mongoose.model("User", this.UserSchema)
     this.CorsOptions = {
-      origin: this.Origin,
+      origin:function (Origin, callback) {
+    if (!origin || allowedOrigins.includes(Origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },,
       credentials: true,
       optionSuccessStatus: 200,
       exposedHeaders: ["set-cookie"],

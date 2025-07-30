@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import compression from "compression"
-import cors from "cors"
+const cors = require("cors")
 
 class Controller extends Model {
   constructor() {
@@ -36,6 +36,8 @@ class Controller extends Model {
 this.App.use((req, res, next) => {
 
     
+
+
      res.set({
             'Access-Control-Allow-Origin': 'http://localhost:3000', 
             'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',

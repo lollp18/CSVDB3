@@ -60,7 +60,7 @@ this.App.use((req, res, next) => {
     this.App.use(cookieParser())
     this.App.use(bodyParser.json())
     this.App.use("/", this.Router)
-this.App.options('*', cors()); 
+this.App.options('*', cors(this.CorsOptions)); 
   }
 
   ListenServer() {

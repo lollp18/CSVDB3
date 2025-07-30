@@ -38,7 +38,7 @@ class Controller extends Model {
     this.App.use(cookieParser())
     this.App.use(bodyParser.json())
     this.App.use("/", this.Router)
-this.App.options('*', cors(this.CorsOptions)); 
+this.App.options('*', cors()); 
   }
 
   ListenServer() {

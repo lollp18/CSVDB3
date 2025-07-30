@@ -37,7 +37,7 @@ this.App.use((req, res, next) => {
 
     
      res.set({
-            'Access-Control-Allow-Origin': 'true', 
+            'Access-Control-Allow-Origin': 'http://localhost:3000/', 
             'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
             'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization', 
             'Access-Control-Allow-Credentials': 'true',

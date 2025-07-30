@@ -50,7 +50,7 @@ this.Origin=[
     } else {
       callback(new Error('Not allowed by CORS'));
     }
-  },,
+  },
       credentials: true,
       optionSuccessStatus: 200,
       exposedHeaders: ["set-cookie"],

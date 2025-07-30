@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import compression from "compression"
-const cors = require("cors")
+import cors from "cors"
 
 class Controller extends Model {
   constructor() {

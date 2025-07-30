@@ -29,8 +29,7 @@ class Model {
       CurrentTables: [],
     }
 this.Origin=[
-  "http://localhost:3000/*",
-  "http://localhost:3000/users",
+  "http://localhost:3000/",
   "https://csvdb-3.vercel.app/",
   "https://csv3.netlify.app/"]
     this.UserSchema = new mongoose.Schema(this.Schema)

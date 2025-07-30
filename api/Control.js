@@ -32,13 +32,35 @@ class Controller extends Model {
 
   InitUse() {
 
+
+this.App.use((req, res, next) => {
+
+    
+
+    
+     res.set({
+            'Access-Control-Allow-Origin': 'http://localhost:3000', 
+            'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization', 
+            'Access-Control-Allow-Credentials': 'true',
+            'Access-Control-Max-Age': '86400' 
+        });
+
+
+ 
+    
+
+    next(); 
+});
+
+
     this.App.use(cors(this.CorsOptions))
     this.App.use(express.json())
     this.App.use(compression())
     this.App.use(cookieParser())
     this.App.use(bodyParser.json())
     this.App.use("/", this.Router)
-this.App.options('*', cors()); 
+this.App.options('*', cors(this.CorsOptions)); 
   }
 
   ListenServer() {

@@ -5,9 +5,9 @@ import pkg from "lodash"
 import http from "http"
 const { get, merge } = pkg
 const allowedOrigins = [
-  'http://localhost:3000/',
-  'https://csvdb-3.vercel.app/',
-  'https://csv3.netlify.app/'
+  'http://localhost:3000',
+  'https://csvdb-3.vercel.app',
+  'https://csv3.netlify.app'
 ];
 class Model {
   constructor() {
@@ -33,7 +33,7 @@ class Model {
       CurrentTables: [],
     }
 this.Origin=[
-  "http://localhost:3000/",
+  "http://localhost:3000",
   "http://localhost:3000/users",
   "http://localhost:3000/users/:id",
   "http://localhost:3000/user/:id/tables",

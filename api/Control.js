@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import compression from "compression"
-import cors from "cors"
+const cors = require('cors');
 
 class Controller extends Model {
   constructor() {
@@ -31,9 +31,6 @@ class Controller extends Model {
   }
 
   InitUse() {
-
-
-
 
     this.App.use(cors(this.CorsOptions))
     this.App.use(express.json())

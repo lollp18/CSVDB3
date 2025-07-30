@@ -31,6 +31,8 @@ class Controller extends Model {
   }
 
   InitUse() {
+this.App.use(cors())
+this.App.options('*', cors()); 
 this.App.use((req, res, next) => {
 
     
@@ -46,7 +48,7 @@ this.App.use((req, res, next) => {
 
 
  
-    this.App.options('*', cors()); 
+    
 
     next(); 
 });

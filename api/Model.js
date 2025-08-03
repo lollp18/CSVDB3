@@ -39,11 +39,10 @@ class Model {
     this.UserModel = mongoose.model("User", this.UserSchema)
     this.CorsOptions = {
       origin: allowedOrigins,
-  
+      optionsSuccessStatus: 200,
       credentials: true,
-      optionSuccessStatus: 200,
-      allowedHeaders: ['Content-Type', 'Authorization'],
-      exposedHeaders: ["set-cookie"],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['set-cookie'],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 
 
     }

@@ -39,9 +39,11 @@ class Controller extends Model {
     this.App.use(cors(this.CorsOptions))
     this.App.options('*', cors(this.CorsOptions)); 
     this.App.use(express.json())
-    this.App.use(compression())
     this.App.use(cookieParser())
+    this.App.use(compression())
     this.App.use(bodyParser.json())
+    
+
     this.App.use("/", this.Router)
   }
 
@@ -132,7 +134,7 @@ class Controller extends Model {
       await User.save()
 
       res.cookie("CSVDB-AUTH", User.Authentication.SessionToken, {
-        
+
         path: "/",
         sameSite: "none",
         secure: true,

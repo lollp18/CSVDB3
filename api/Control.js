@@ -134,7 +134,7 @@ class Controller extends Model {
       await User.save()
 
       res.cookie("CSVDB-AUTH", User.Authentication.SessionToken, {
-
+        
         path: "/",
         sameSite: "none",
         secure: true,

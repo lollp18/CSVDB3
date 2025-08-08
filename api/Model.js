@@ -41,6 +41,7 @@ class Model {
       origin: allowedOrigins,
       optionsSuccessStatus: 200,
       credentials: true,
+      withCredentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
   exposedHeaders: ['set-cookie'],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 

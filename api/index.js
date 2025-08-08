@@ -8,4 +8,4 @@ controller.InitUse()
 
 
 controller.InitMongoDB()
-export default serverless(controller.App)
+export default controller.App

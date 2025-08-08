@@ -129,11 +129,11 @@ class Controller extends Model {
       await User.save()
 
       res.cookie("CSVDB-AUTH", User.Authentication.SessionToken, {
-        Domain: "csvdb-3.vercel.app",
+       
         httpOnly: true,
         path: "/",
         sameSite: "none",
-        secure: true,
+        secure: false,
         maxAge: 900000,
       })
 

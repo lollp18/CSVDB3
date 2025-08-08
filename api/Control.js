@@ -148,6 +148,7 @@ class Controller extends Model {
   SetGetAllUsers() {
     this.Router.get(
       this.PathUsers,
+
       this.IsAuthenticated.bind(this),
       this.GetAllUsers.bind(this)
     )
@@ -217,6 +218,7 @@ class Controller extends Model {
   SetGetUserTables() {
     this.Router.get(
       this.PathUserTables,
+      cors(this.CorsOptions),
       this.IsAuthenticated.bind(this),
       this.IsOwner.bind(this),
       this.GetUserTables.bind(this)

@@ -133,7 +133,7 @@ class Controller extends Model {
         httpOnly: true,
         path: "/",
         sameSite: "none",
-        secure: false,
+        secure: true,
         maxAge: 900000,
       })
 

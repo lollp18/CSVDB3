@@ -130,7 +130,6 @@ class Controller extends Model {
 
       res.cookie("CSVDB-AUTH", User.Authentication.SessionToken, {
        
-        httpOnly: true,
         path: "/",
         sameSite: "none",
         secure: true,

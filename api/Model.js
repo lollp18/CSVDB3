@@ -41,8 +41,7 @@ class Model {
       origin:[
     "http://localhost:3000",
     "https://csv3.netlify.app",
-    "https://csv3.netlify.app/",
-    "https://csv3.netlify.app/CSV"
+
   ],
       optionsSuccessStatus: 200,
       credentials: true,

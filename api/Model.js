@@ -40,7 +40,7 @@ class Model {
     this.CorsOptions = {
       origin:[
     "http://localhost:3000",
-    "https://csv3.netlify.app"
+    "https://csv3.netlify.app/"
   ],
       optionsSuccessStatus: 200,
       credentials: true,

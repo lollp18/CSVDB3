@@ -7,7 +7,8 @@ const { get, merge } = pkg
 const allowedOrigins = [
   'http://localhost:3000',
   'https://csvdb-3.vercel.app',
-  'https://csv3.netlify.app'
+  'https://csv3.netlify.app',
+  'https://3000-idx-csv3git-1731926139042.cluster-6yqpn75caneccvva7hjo4uejgk.cloudworkstations.dev/'
   
 ];
 class Model {

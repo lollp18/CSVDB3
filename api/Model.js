@@ -89,11 +89,11 @@ class Model {
   async IsAuthenticated(req, res, next) {
     try {
       const SessionToken = req.cookies["CSVDB-AUTH"]
-
+console.log(SessionToken)
       if (!SessionToken) return res.sendStatus(403)
 
       const ExistingUser = await this.GetUserBySessionToken(SessionToken)
-
+      console.log(ExistingUser)
       if (!ExistingUser) return res.sendStatus(403)
 
       merge(req, { Identity: ExistingUser })
@@ -112,7 +112,7 @@ class Model {
       const CurrentUserId = get(req, "Identity._id")
 
       if (!CurrentUserId) return res.sendStatus(400)
-
+console.log(id,CurrentUserId)
       if (CurrentUserId.toString() !== id) return res.sendStatus(403)
 
       return next()

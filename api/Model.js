@@ -4,13 +4,7 @@ import express from "express"
 import pkg from "lodash"
 import http from "http"
 const { get, merge } = pkg
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://csvdb-3.vercel.app',
-  'https://csv3.netlify.app',
-  'https://3000-idx-csv3git-1731926139042.cluster-6yqpn75caneccvva7hjo4uejgk.cloudworkstations.dev/'
-  
-];
+
 class Model {
   constructor() {
     this.App = express()
@@ -42,6 +36,7 @@ class Model {
       origin:[
     "http://localhost:3000",
     "https://csv3.netlify.app",
+    "https://3000-firebase-csv3-1761995904958.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev"
 
   ],
       optionsSuccessStatus: 200,

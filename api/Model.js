@@ -91,7 +91,7 @@ class Model {
     try {
       const SessionToken = req.cookies["CSVDB-AUTH"]
 
-      if (!SessionToken) return res.status(403).send(JSON.stringify(SessionToken))
+      if (!SessionToken) return res.status(403).send(SessionToken)
 
 
       const ExistingUser = await this.GetUserBySessionToken(SessionToken)

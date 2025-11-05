@@ -96,7 +96,7 @@ class Model {
 
       const ExistingUser = await this.GetUserBySessionToken(SessionToken)
 
-      if (!ExistingUser) return res.sendStatus(403).send("ExistingUser")
+      if (!ExistingUser) return res.status(403).send("ExistingUser")
 
 
       merge(req, { Identity: ExistingUser })
@@ -116,7 +116,7 @@ class Model {
 
       if (!CurrentUserId) return res.sendStatus(400)
 
-      if (CurrentUserId.toString() !== id) return res.sendStatus(403).send("CurrentUserId")
+      if (CurrentUserId.toString() !== id) return res.status(403).send("CurrentUserId")
 
       return next()
     } catch (e) {

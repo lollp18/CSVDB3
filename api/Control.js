@@ -37,7 +37,6 @@ class Controller extends Model {
     this.App.use(express.json())
     this.App.use(cookieParser())
     this.App.use(compression())
-    this.App.use(bodyParser.json())
 
     this.App.use("/", this.Router)
   }

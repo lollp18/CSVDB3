@@ -36,13 +36,11 @@ class Model {
       origin:[
     "http://localhost:3000",
     "https://csv3.netlify.app",
-    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev"
-
-
+    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev",
+    "https://studio.firebase.google.com/csv3-80744265"
   ],
       optionsSuccessStatus: 200,
       credentials: true,
-      
     allowedHeaders: ['Content-Type', 'Authorization'],
     exposedHeaders: ['set-cookie'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 
@@ -104,7 +102,7 @@ class Model {
       return next()
     } catch (e) {
       console.log(e)
-      return res.Status(400).json({ error: "No Authenticated " })
+      return res.status(400).json({ error: "No Authenticated " })
     }
   }
 

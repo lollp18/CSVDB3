@@ -90,12 +90,12 @@ class Model {
   async IsAuthenticated(req, res, next) {
     try {
       const SessionToken = req.cookies["CSVDB-AUTH"]
-console.log(SessionToken)
-      if (!SessionToken) return res.sendStatus(403).send("SessionToken")
+
+      if (!SessionToken) return res.status(403).send("SessionToken")
 
 
       const ExistingUser = await this.GetUserBySessionToken(SessionToken)
-      console.log(ExistingUser)
+
       if (!ExistingUser) return res.sendStatus(403).send("ExistingUser")
 
 

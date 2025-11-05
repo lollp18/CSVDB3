@@ -104,7 +104,7 @@ class Model {
       return next()
     } catch (e) {
       console.log(e)
-      return res.sendStatus(400)
+      return res.Status(400).json({ error: "No Authenticated " })
     }
   }
 

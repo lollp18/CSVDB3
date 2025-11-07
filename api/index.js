@@ -7,7 +7,8 @@ controller.InitRouten()
 
 controller.InitUse()
 
-controller.ListenServer()
+
 
 controller.InitMongoDB()
 
+export default controller.App

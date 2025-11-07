@@ -1,14 +1,10 @@
-
 import Controller from "./Control.js"
 
 const controller = new Controller()
 
-controller.InitUse()
-controller.InitRouten()
-
-
-controller.ListenServer()
-
 controller.InitMongoDB()
+controller.InitRouten()
+controller.InitUse()
+
 
 export default controller.App

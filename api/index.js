@@ -3,9 +3,9 @@ import Controller from "./Control.js"
 
 const controller = new Controller()
 
+controller.InitUse()
 controller.InitRouten()
 
-controller.InitUse()
 
 controller.ListenServer()
 

@@ -48,8 +48,8 @@ class Controller extends Model {
 
   InitUse() {
 
-    this.App.use(cors(this.CorsOptions.bind(this)))
-    this.App.options('*', cors(this.CorsOptions.bind(this))); 
+    this.App.use(cors(this.CorsOptions))
+    this.App.options('*', cors(this.CorsOptions)); 
     this.App.use(express.json())
     this.App.use(cookieParser())
     this.App.use(compression())

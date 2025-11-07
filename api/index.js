@@ -7,7 +7,7 @@ controller.InitRouten()
 
 controller.InitUse()
 
-
+controller.ListenServer()
 
 controller.InitMongoDB()
 

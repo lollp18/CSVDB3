@@ -58,14 +58,14 @@ class Controller extends Model {
   }
 
   ListenServer() {
-    this.CsvDB.listen(8080, () => {
+    
       this.App.get("/", (req, res) => {
         res.send(
           "<h1>CsvDB</h1><a href='http://localhost:8080/auth/registriren' >registriren<a>"
         )
       })
       console.log("Server running on http://localhost:8080/")
-    })
+  
   }
 
   InitMongoDB() {

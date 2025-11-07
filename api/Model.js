@@ -36,8 +36,8 @@ class Model {
       origin:[
     "http://localhost:3000",
     "https://csv3.netlify.app",
-    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev",
-    "https://studio.firebase.google.com/csv3-80744265"
+    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev/",
+    
   ],
       optionsSuccessStatus: 200,
       credentials: true,

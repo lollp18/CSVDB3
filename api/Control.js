@@ -1,7 +1,7 @@
 import Model from "./Model.js"
 import express from "express"
 import mongoose from "mongoose"
-import bodyParser from "body-parser"
+
 import cookieParser from "cookie-parser"
 import compression from "compression"
 import cors from "cors"
@@ -19,20 +19,7 @@ class Controller extends Model {
     this.PathUserTables = "/user/:id/tables"
     this.PathUserTablesDelete = "/user/:id/tables/:tableID"
 
-    this.CorsOptions = {
-      origin:[
-    
-    "https://csv3.netlify.app",
-    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev/",
-    
-  ],
-      optionsSuccessStatus: 200,
-      credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    exposedHeaders: ['set-cookie'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 
-
-    }
+   
     
   }
 
@@ -48,7 +35,20 @@ class Controller extends Model {
 
   InitUse() {
 
-    this.App.use(cors(this.CorsOptions))
+    this.App.use(cors({
+      origin:[
+    
+    "https://csv3.netlify.app",
+    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev/",
+    
+  ],
+      optionsSuccessStatus: 200,
+      credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['set-cookie'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'] 
+
+    }))
     this.App.options('*', cors()); 
     this.App.use(express.json())
     this.App.use(cookieParser())

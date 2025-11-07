@@ -39,7 +39,7 @@ class Controller extends Model {
       origin:[
     
     "https://csv3.netlify.app",
-    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev/",
+    "https://3000-firebase-csv3-1762077727673.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev",
     
   ],
       optionsSuccessStatus: 200,
@@ -57,16 +57,6 @@ class Controller extends Model {
     this.App.use("/", this.Router)
   }
 
-  ListenServer() {
-    
-      this.App.get("/", (req, res) => {
-        res.send(
-          "<h1>CsvDB</h1><a href='http://localhost:8080/auth/registriren' >registriren<a>"
-        )
-      })
-      console.log("Server running on http://localhost:8080/")
-  
-  }
 
   InitMongoDB() {
     mongoose.Promise = Promise

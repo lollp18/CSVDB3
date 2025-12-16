@@ -139,7 +139,7 @@ class Controller extends Model {
         sameSite: "none",
         secure: true,
         maxAge: 900000,
-        httpOnly: true,
+       
       })
 
       return res.status(201).json(User).end()
